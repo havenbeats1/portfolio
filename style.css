@@ -5,7 +5,9 @@
 }
 
 .container{
-    background-color: #111;
+    background-color: rgb(24, 23, 23);
+    overflow: hidden;
+
 }
 
 .salute{
@@ -24,7 +26,7 @@
 }
 
 .saluteText{
-    color: #333;
+    color: rgba(250, 242, 242, 0.699);
     font-size: 60vw;
     cursor: default !important;
 }
@@ -35,30 +37,32 @@
 
 .nameContainer{
     height: 100vh;
-    background: rebeccapurple;
+    background: rgba(14, 13, 13, 0.87);
 }
 .name{
     font-size: 18vw;
-    color: #333;
+    color: rgba(250, 242, 242, 0.658);
     cursor: default;
     text-align: center;
     line-height: 89vh;
 }
+
+
 
 .jobTitleContainer {
     height: 100vh;
 }
 
 .dark{
-    background: url("./img/bg1.png");
+    background: rgba(20, 20, 20, 0.658)url("./img/bg1.png");
 }
 .purple{
-    background: rebeccapurple url("./img/bg2.png");
+    background: rgba(25, 16, 32, 0.616) url("./img/bg2.png");
 }
 
 .jobTitle{
     font-size: 10vw;
-    color: #333;
+    color: rgb(206, 206, 206);
     cursor: default;
     line-height: 100vh;
 }
@@ -72,7 +76,7 @@
 
 .projectsTitle{
     font-size: 10vw;
-    color: #333;
+    color: rgb(250, 242, 242);
 }
 
 .project{
@@ -81,7 +85,9 @@
     gap: 100px;
     height: 100vh;
     overflow: hidden;
-
+}
+.project:nth-child(2n){
+    flex-direction: row-reverse;
 }
 
 .phone{
@@ -119,12 +125,12 @@
 
 .projectTitle{
     font-size: 7vw;
-    color: #555;
+    color: rgb(250, 242, 242);
 }
 
 .projectDesc{
     font-size: 20px;
-    color: #555;
+    color: rgb(250, 242, 242);
     text-align: justify;
     line-height: 40px;
 }
@@ -171,6 +177,121 @@
     position: absolute;
     top: 18px;
     left: 68px;
-    overflow: hidden;
-    background-color: aqua;
+    overflow: scroll;
 }
+
+.laptopApp{
+    width: 100%
+}
+
+.laptopScreen::-webkit-scrollbar{
+    display: none;
+}
+
+.githubContainer{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.githubTitle{
+    font-size: 100px;
+    color: #333;
+}
+
+.githubChart{
+    width: 820px;
+    text-align: center;
+}
+
+.dates{
+    padding: 10px;
+    color: #555;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.boxContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap:5px;
+
+}
+
+.box{
+    width: 15px;
+    height: 15px;
+    background-color: #9a80bb;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: 3s all ease;
+}
+
+.active:nth-child(4n){
+    background-color: #124721;
+}
+
+.githubChart:hover .active:nth-child(2n+1){
+    background-color: #124721;
+}
+
+.githubChart:hover .active:nth-child(2n){
+    background-color: #092511;
+}
+
+@media screen and (max-width:1024px) {
+
+    .projects{
+      padding: 0 30px;
+      text-align: center;
+    }
+  
+    .project{
+      flex-direction: column;
+      height: max-content;
+    }
+    .project:nth-child(2n){
+      flex-direction: column;
+    }
+  
+    .phone,.laptop{
+      transform: none !important;
+    }
+    
+    .githubChart{
+      display: none;
+    }
+  
+    .githubTitle{
+      text-align: center;
+      font-size: 10vw;
+    }
+  
+    .githubSm{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      color:#555;
+      font-size: 30px;
+      text-align: center;
+    }
+  }
+
+  .githubLink{
+    text-shadow: rgb(24, 23, 23);
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .githubLink:visited { 
+    text-decoration: none; 
+    color: orange; 
+   }
